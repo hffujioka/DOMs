@@ -1,0 +1,19 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      function showC() {
+      var a = Math.pow(document.getElementById('a').value,2);
+      var b = Math.pow(document.getElementById('b').value,2);
+      var c = Math.sqrt((a + b));
+      document.getElementById('c').innerHTML="C = " + c
+      }
+    </script>
+      <h1>A:</h1>
+      <input type="number" id="a"></input>
+      <h1>B:</h1>
+      <input type="number" id="b"></input>
+      <h1 id="c">C = </h1>
+      <button onclick="showC()">Show answer</button>
+  </body>
+</html>
