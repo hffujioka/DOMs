@@ -1,3 +1,4 @@
+<!--adds turkey to the bottom of the shopping list-->
 <html>
   <head></head>
   <body>
@@ -21,5 +22,34 @@
         <li>Duck</li>
         <li>Goose</li>
       </ul>
+  </body>
+</html>
+
+
+
+
+
+<!--takes input from a user and adds it to the bottom of the list-->
+<html>
+  <head></head>
+  <body>
+    <script>
+      function addAnother() {
+        var newListItem = document.createElement('li');
+        //create a new item and store it in a variable//
+        var userInput = document.getElementById('newInput').value;
+        var newText = document.createTextNode(userInput);
+        //create a new text node and store it in a variable//
+        newListItem.appendChild(newText);
+        //attach the new text node to the new element
+        var position = document.getElementsByTagName('ul')[0];
+        //find the new position where the new element should be added//
+        position.appendChild(newListItem);
+        //Insert the new element into its position//
+      }
+    </script>
+      <input type="text" id="newInput">
+      <button onclick="addAnother()">Click Here</button>
+      <ul></ul>
   </body>
 </html>
